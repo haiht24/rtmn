@@ -1,0 +1,13 @@
+<?php
+
+$config = array(
+    'debug' => 2,
+    'ShortUrl' => 'http://dev.mccorp.co.com/branch/mostcoupon/',
+
+     'Api' => array(
+        'scheme' => 'http',
+        'host' => 'dev.mccorp.co.com',
+        'path' => '/branch/api/'
+     ),
+    'FB_APP_ID' => '1403855373258662'
+);

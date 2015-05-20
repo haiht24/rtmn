@@ -1,0 +1,1 @@
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>

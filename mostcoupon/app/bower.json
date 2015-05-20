@@ -1,0 +1,20 @@
+{
+  "name": "mCus frontend",
+  "version": "0.0.0",
+  "homepage": "http://mcus.com",
+  "authors": [
+    "Quan Do <thienkimlove@gmail.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "1.*",
+    "angular": "*",
+    "jquery-ui": "*",    
+    "angular-ui-sortable": "git@github.com:angular-ui/ui-sortable.git#angular1.2",    
+    "update.js": "http://browser-update.org/update.js",
+    "autofill-event": "~1.0.0",
+    "angular-placeholder-shim": "*",
+    "bpopup": "*",
+    "jquery.sparkline": "*"
+  }
+}

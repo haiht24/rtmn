@@ -1,0 +1,13 @@
+<?php
+
+$config = array(
+    'debug' => 2,
+    'ShortUrl' => 'http://beta.mccorp.co.com/',
+
+     'Api' => array(
+        'scheme' => 'http',
+        'host' => 'api.mccorp.co.com',
+        'path' => '/'
+     ),
+    'FB_APP_ID' => '1403855373258662'
+);

@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+</IfModule>
+
+AddType application/vnd.ms-fontobject .eot
+AddType lib/fontawesome/fonts/fontawesome-webfont .woff
+AddType lib/fontawesome/fonts/fontawesome-webfont .svg
+AddType application/x-font-truetype .ttf
+AddType image/svg+xml .svg
+AddType lib/fontawesome/fonts/FontAwesome .otf

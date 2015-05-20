@@ -1,0 +1,10 @@
+@import url("../../style.min.css");
+body#tinymce {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0;
+  border: none;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5em;
+}

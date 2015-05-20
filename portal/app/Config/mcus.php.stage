@@ -1,0 +1,25 @@
+<?php
+  $config['debug'] = 2; //must be set to 0 in production mode in order to send email to other.
+
+  $config['Url'] = "http://dev.mccorp.co.com/branch/portal/";
+
+  $config['UrlFrontend'] = "http://dev.mccorp.co.com/branch/mostcoupon/";
+
+  $config['PayPal'] = array(
+        'Credentials' => array(
+            'USER' => 'quan.dm-facilitator_api1.altplus.com.vn',
+            'PWD' => '1402888304',
+            'SIGNATURE' => 'AFcWxV21C7fd0v3bYYYRCpSSRl31ABKeheB1D16DRUo3E.128fnz1lTF'
+        ),
+        'EndPoint' => 'https://api-3t.sandbox.paypal.com/nvp',
+        'RedirectUrl' => 'https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&token='
+  );
+
+  $config['AWS'] = ['S3' =>
+          [
+            'key'    => 'AKIAIPD4AXMDK2LIULKA',
+            'secret' => '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',
+            'region' => 'us-west-2',
+            'bucket' => 'dev.mostcoupon.com',
+            'bucketBaseUrl' => 'https://s3-us-west-2.amazonaws.com/dev.mostcoupon.com/'
+        ]];

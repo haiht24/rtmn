@@ -1,0 +1,124 @@
+textarea { resize: vertical !important; }
+.header-h2 {
+    float: left;
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    font-size: 14px;
+    position: relative;
+    margin: 0 0 0 10px;
+    line-height: 34px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+table.dataTable thead th.action{
+    width: 80px;
+}
+
+.select2-results .select2-selected {
+    display: list-item;
+}
+
+.select2-results li.select2-selected > div {
+    background-color: #c5c5cc;
+}
+
+.ui-datepicker {
+    z-index: 1051 !important;
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 10px 10px !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-style: italic !important;
+    text-align: left !important;
+    width: auto;
+    padding: 0 10px;
+    border-bottom: none;
+}
+
+#jarviswidget-fullscreen-mode {
+    z-index: 1000;
+}
+
+.label {
+    font-size: 90%;
+}
+
+.symbol.required:before {
+    content: "*";
+    display: inline;
+    color: #E6674A;
+}
+
+.symbol.ok:before {
+    content: "\f00c";
+    display: inline;
+    font-family: FontAwesome;
+    color: #468847;
+}
+
+ul.myErrorClass, select.myErrorClass {
+    border: 1px solid #a94442 !important;
+}
+
+span.myErrorClass {
+    color: #a94442 !important;
+}
+
+.nav li.open > ul {
+    display: block;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: transparent;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+}
+
+.form-group.has-error .fileinput .thumbnail {
+    border-color: #a94442;
+}
+
+.checkbox-column {
+    width: 14px;
+    text-align: center;
+}
+
+.checkbox-column .checkbox {
+    padding-left: 0 !important;
+}
+
+.btn-trash {
+    color: #ff0000;
+}
+
+.addCouponForm .input-group select.form-control {
+    width: 30%;
+}
+
+.addCouponForm .input-group input.form-control.coupon-discount {
+    width: 70%;
+}
+
+.addCouponForm .input-group {
+    width: 100%;
+}
+
+.store-title-link {
+    font-weight: 600;
+}
+
+legend.scheduler-border {
+    width: auto; /* Or auto */
+    padding: 0 10px; /* To give a bit of padding on the left and right */
+    border-bottom: none;
+}

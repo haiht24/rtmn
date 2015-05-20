@@ -1,0 +1,23 @@
+1.0.3 - 8/26/2014
+* inc/template-tags.php - Fixed related posts cache issue, causing the same related posts on all posts.
+
+1.0.2 - 8/20/2014
+* Update language
+* functions.php - Remove twice post formats code
+* inc/classes/widget-recent.php - Remove twice recent posts thumbnail transient flusher
+* inc/scripts.php - Remove respond.js
+                  - Remove fontawesome
+* style.css - Include fontawesome in style.css
+            - Fix gallery style
+* bootstrap - Remove bootstrap folder
+* Reorganize assets folder
+
+1.0.1 - 6/25/2014
+* Fix issue with the stripped ad code
+* Fix footer text alignment issue
+* Add footer and header output code
+* Fix missing WordPress css class
+* Remove theme-check plugin error
+
+1.0.0 - 6/23/2014
+* Initial release

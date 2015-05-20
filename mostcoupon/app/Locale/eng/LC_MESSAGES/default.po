@@ -1,0 +1,11 @@
+msgid "require field"
+msgstr "The field %s must required"
+
+msgid "invalid email"
+msgstr "Invalid email address"
+
+msgid "minlen"
+msgstr "The field %s require min %d characters"
+
+msgid "maxlen"
+msgstr "The field %s require max %d characters"

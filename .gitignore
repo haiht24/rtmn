@@ -1,13 +1,19 @@
-CakePHP 3
+api/app/Config/database.php
+api/app/Config/mcus.php
+api/app/temp/
 
-/vendor/*
-/config/app.php
-/tmp/*
-/logs/*
+*.eot
+*.ttf
+mostcoupon/app/Config/mcus.php
+mostcoupon/app/temp/
 
-CakePHP 2
+portal/app/Config/database.php
+portal/app/Config/mcus.php
+portal/app/temp/
 
-/app/tmp/*
-/app/Config/core.php
-/app/Config/database.php
-/vendors/*
+.idea/*
+
+/bogo/blog/wp-config.php
+/bogo/blog/wp-content/uploads/*
+/bogo/blog/.htaccess
+
