@@ -59,7 +59,11 @@
                 <a href="#"><i class="fa fa-lg fa-fw fa-ticket"></i> <span
                         class="menu-item-parent">MostCoupon</span></a>
                 <ul>
-
+                    <li>
+                      <a href="<?php echo $this->Html->url(['controller' => 'Rtmn']) ?>">
+                        RTMN
+                      </a>
+                    </li>
                     <li>
                       <a href="<?= $this->Html->url(['controller' => 'contents']) ?>">
                         Content Management
