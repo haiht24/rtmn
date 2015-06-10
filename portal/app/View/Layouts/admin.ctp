@@ -38,10 +38,9 @@
 <!--        <link rel="shortcut icon" href="<?php //echo $this->Html->url('img/favicon/favicon.ico') ?>" type="image/x-icon">
         <link rel="icon" href="<?php //echo $this->Html->url('img/favicon/favicon.ico') ?>" type="image/x-icon">-->
 
-        <!-- GOOGLE FONT -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
-        <!-- Specifying a Webpage Icon for Web Clip 
+
+        <!-- Specifying a Webpage Icon for Web Clip
         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
         <link rel="apple-touch-icon" href="<?php echo $this->Html->url('img/splash/sptouch-icon-iphone.png') ?>">
 
@@ -62,11 +61,11 @@
         echo $this->element('css_and_js');
         echo $this->fetch('css');
         echo $this->fetch('script');
-        echo $this->element('google_analytics');
-        echo $this->element('browser_update');
-        echo $this->element('alexa');
-        echo $this->Html->meta(array('name' => 'robots', 'content' => 'noindex, nofollow'));
-        echo $this->Html->meta(array('name' => 'googlebot', 'content' => 'noindex, nofollow'));
+        // echo $this->element('google_analytics');
+        // echo $this->element('browser_update');
+        // echo $this->element('alexa');
+        // echo $this->Html->meta(array('name' => 'robots', 'content' => 'noindex, nofollow'));
+        // echo $this->Html->meta(array('name' => 'googlebot', 'content' => 'noindex, nofollow'));
         ?>
 
     </head>
@@ -74,7 +73,7 @@
         <!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
 
         <!-- HEADER -->
-        <?php echo $this->element('header') ?>
+        <?php //echo $this->element('header') ?>
         <!-- END HEADER -->
 
         <!-- Left panel : Navigation area -->
@@ -88,10 +87,10 @@
             <!-- RIBBON -->
             <div id="ribbon">
 
-                <span class="ribbon-button-alignment"> 
+                <span class="ribbon-button-alignment">
                     <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
                         <i class="fa fa-refresh"></i>
-                    </span> 
+                    </span>
                 </span>
 
                 <!-- breadcrumb -->
