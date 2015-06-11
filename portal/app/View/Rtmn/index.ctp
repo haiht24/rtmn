@@ -1,43 +1,35 @@
 <?php $this->Ng->ngController('RtmnCtrl') ?>
 <script type="text/javascript">
     $(document).ready(function($){
-        $('#start').click(function(){
-            var textfield = $('#site-title').html();
-            console.log(textfield);
-        });
-
-        // $.post("<?php echo $this->Html->url(['controller' => 'Rtmn', 'action' => 'start']) ?>",
-        // function(rs) {
-        //     $("#result").html(rs);
+        // $('#start').click(function(){
+        //     var textfield = $('#site-title').html();
+        //     console.log(textfield);
         // });
+        var TARGET = 'http://cousinisaac.com/mobitol/index.php';
+        // var PROCESS_URL = 'www.retailmenot.com/view/target.com';
+        var PROCESS_URL = 'http://www.retailmenot.com/view/bestbuy.com';
+
 
         $.ajax({
             type : 'POST',
-            url : 'http://cousinisaac.com/mobitol/index.php',
+            url : TARGET,
             data: {
-                url   : 'www.retailmenot.com/view/target.com',
+                url   : PROCESS_URL,
                 TextType : 'html'
             },
-            // dataType : 'jsonp',
             success:function (data) {
                 $("#result").append(data);
             },
             complete:function (data) {
-                // console.log(data.responseText);
-                // $("#result").append(data.responseText);
                 var e = $('#textfield').html();
-                // alert(e);
-                // $("#result").html(e);
+                var sendData = {'send' : e, 'rtmnURL' : PROCESS_URL};
 
                 $.post("<?php echo $this->Html->url(['controller' => 'Rtmn', 'action' => 'start']) ?>",
-                {'send' : e}, function(rs) {
+                sendData, function(rs) {
                     $("#result").html(rs);
-                    // alert(rs);
                 });
             }
         });
-
-
     })
 </script>
 <button id="start" class="btn btn-primary">Start</button>
