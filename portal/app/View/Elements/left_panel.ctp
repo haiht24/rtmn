@@ -65,6 +65,11 @@
                       </a>
                     </li>
                     <li>
+                      <a href="<?php echo $this->Html->url(['controller' => 'Rtmn', 'action' => 'index_2']) ?>">
+                        RTMN 2
+                      </a>
+                    </li>
+                    <li>
                       <a href="<?= $this->Html->url(['controller' => 'contents']) ?>">
                         Content Management
                       </a>
