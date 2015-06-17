@@ -4,6 +4,8 @@ App::uses('File', 'Utility');
 
 class RtmnController extends AppController
 {
+    public $uses = ['RtmnUrls'];
+
     public function index(){
         // $this->autoRender = false;
     }
@@ -22,6 +24,7 @@ class RtmnController extends AppController
 
         $html = new simple_html_dom();
         $html->load($send);
+
         $botDetected = $html->find('textarea[name="recaptcha_challenge_field"]', 0) ? true : false;
         if($botDetected){
             return json_encode('error');
@@ -115,5 +118,49 @@ class RtmnController extends AppController
             $send = str_replace('&gt;', '>', $send);
         }
         return $send;
+    }
+
+    public function processCategories(){
+        $this->autoRender = false;
+        App::import('Vendor', 'SimpleHtmlDom', 'simple_html_dom.php');
+
+        $html = new simple_html_dom();
+        for ($i=1; $i < 50; $i++) {
+            $file = new File(APPLIBS . '/cats/' . $i .'.html');
+            if($file->exists()){
+                $html->load($file->read());
+                $botDetected = $html->find('textarea[name="recaptcha_challenge_field"]', 0) ? true : false;
+                if($botDetected){
+                    return json_encode('error');
+                }
+
+                $arrStores = [];
+                foreach ($html->find('ul[class="offer_list"] li') as $dom) {
+                    array_push($arrStores, 'www.retailmenot.com' . $dom->find('a', 0)->href);
+                }
+                foreach ($html->find('ol[class="topList"] li') as $dom) {
+                    array_push($arrStores, 'www.retailmenot.com' . $dom->find('a', 0)->href);
+                }
+                // Remove duplicate urls
+                $arrStores = array_unique($arrStores);
+
+                $storesWillInsert = [];
+                if(count($arrStores) > 0){
+                    foreach ($arrStores as $k => $s) {
+                        if($this->RtmnUrls->hasAny(['RtmnUrls.url' => $s]) == false){
+                            $arr['url'] = $s;
+                            array_push($storesWillInsert, $arr);
+                        }
+                    }
+                }
+                $result = $this->RtmnUrls->saveAll($storesWillInsert) ? 1:0;
+            }else{
+                return 'done';
+                // break;
+            }
+        }
+        /*End For loop*/
+
+
     }
 }
